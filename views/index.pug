@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  #app(class="flex min-h-screen flex-col justify-between")
+    div(class="flex-1 mb-4 bg-blue-lighter p-4")
+      div(class="flex flex-row flex-wrap")
+        div(v-for="goal in goals" class="m-4 rounded-lg bg-blue-light shadow-lg p-4") 
+          span.text-2xl.text-white {{goal.goal}}
+          button(class="bg-red.inline-block.ml-1" v-on:click="deleteGoal(goal)") X
+
+    div(class="flex justify-center")
+      form(class="w-1/4 bg-grey p-4 rounded-lg shadow mb-4", v-on:submit="addGoal")
+        input(type="text" v-model="newGoal" class="border-0 w-full p-4 text-center" placeholder="En dröm jag har är att..." autofocus)
+        input(type="button", value="Spara" class="w-full p-2 border-0 bg-blue-dark text-white")
