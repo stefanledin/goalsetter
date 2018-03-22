@@ -1,0 +1,1 @@
+Ett förädlat todo-projekt där man istället skriver ner målsättningar/drömmar och sedan rangordnar dom i A/B/C-kolumner. Detta är en ursäkt för att leka med Node/Express, Tailwind, IndexedDB (Dexie), Vue m.m. Ska bli en "offline-first" PWA i den bästa av världar 🤠

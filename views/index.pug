@@ -10,5 +10,5 @@ block content
 
     div(class="flex justify-center")
       form(class="w-1/4 bg-grey p-4 rounded-lg shadow mb-4", v-on:submit="addGoal")
-        input(type="text" v-model="newGoal" class="border-0 w-full p-4 text-center" placeholder="En dröm jag har är att..." autofocus)
+        input(type="text" v-model="newGoal" name="goal" class="border-0 w-full p-4 text-center" placeholder="En dröm jag har är att..." autofocus)
         input(type="button", value="Spara" class="w-full p-2 border-0 bg-blue-dark text-white")

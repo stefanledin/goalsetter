@@ -1,8 +1,13 @@
-import Dexie from 'dexie';
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/goalsetter');
+var db = mongoose.connection;
 
-const db = new Dexie('goalsetter');
-db.version(1).stores({
-    goals: '++id, goal, column'
+db.on('error', console.error.bind(console, 'connection error:'));
+
+const goalSchema = mongoose.Schema({
+    goal: String,
+    column: String
 });
+const Goal = mongoose.model('Goal', goalSchema);
 
-export default db;
+module.exports = Goal;
